@@ -1,0 +1,31 @@
+{
+    "nodes": {
+        "Kho Bình Thạnh": [10.802, 106.707],
+        "Kho Quận 1": [10.775, 106.700],
+        "Kho Tân Bình": [10.791, 106.652],
+        "Kho Quận 3": [10.782, 106.690],
+        "Kho Quận 5": [10.755, 106.665],
+        "Kho Quận 7": [10.737, 106.721],
+        "Kho Quận 10": [10.772, 106.667],
+        "Kho Phú Nhuận": [10.799, 106.680],
+        "Kho Gò Vấp": [10.830, 106.680],
+        "Kho Thủ Đức": [10.847, 106.753]
+    },
+
+    "edges": [
+        ["Kho Bình Thạnh", "Kho Quận 1"],
+        ["Kho Quận 1", "Kho Quận 3"],
+        ["Kho Quận 3", "Kho Quận 5"],
+        ["Kho Tân Bình", "Kho Quận 3"],
+        ["Kho Quận 5", "Kho Bình Thạnh"],
+        ["Kho Quận 1", "Kho Quận 10"],
+        ["Kho Quận 3", "Kho Phú Nhuận"],
+        ["Kho Bình Thạnh", "Kho Phú Nhuận"],
+        ["Kho Bình Thạnh", "Kho Gò Vấp"],
+        ["Kho Gò Vấp", "Kho Tân Bình"],
+        ["Kho Quận 7", "Kho Quận 5"],
+        ["Kho Quận 7", "Kho Quận 1"],
+        ["Kho Thủ Đức", "Kho Bình Thạnh"],
+        ["Kho Thủ Đức", "Kho Gò Vấp"]
+    ]
+}
