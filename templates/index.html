@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng giao hàng TP.HCM</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f0f0; text-align: center; }
+        form { margin: 20px auto; width: 400px; padding: 10px; background: white; border-radius: 8px; }
+        select, button { padding: 6px; margin: 6px; }
+        iframe { width: 90%; height: 600px; border: none; }
+    </style>
+</head>
+<body>
+    <h2>🚚 Mô phỏng giao hàng TP.HCM bằng BFS & DFS</h2>
+    <form method="POST">
+        <label>Kho xuất phát:</label>
+        <select name="start">
+            {% for n in nodes %}
+            <option value="{{n}}">{{n}}</option>
+            {% endfor %}
+        </select><br>
+        <label>Kho đích:</label>
+        <select name="goal">
+            {% for n in nodes %}
+            <option value="{{n}}">{{n}}</option>
+            {% endfor %}
+        </select><br>
+        <label>Thuật toán:</label>
+        <select name="algorithm">
+            <option value="bfs">BFS (Tuyến khám phá chiều rộng)</option>
+            <option value="dfs">DFS (Tuyến khám phá sâu)</option>
+        </select><br>
+        <button type="submit">Tìm đường</button>
+    </form>
+
+    {% if path %}
+    <p><b>Kết quả {{algo.upper()}}:</b> {{path}}</p>
+    {% endif %}
+
+    {{ map_html | safe }}
+</body>
+</html>
